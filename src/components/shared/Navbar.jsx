@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Logo from './Logo';
 import { usePathname } from 'next/navigation';
+import PlanSaved from './Plan@Saved';
 
 const Navbar = () => {
 
@@ -29,12 +30,12 @@ const Navbar = () => {
                     <Link href="./"><Logo /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 gap-6 text-lg font-semibold">
+                    <ul className="menu menu-horizontal px-1 text-lg font-semibold">
                         {mentu}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <PlanSaved />
                 </div>
             </div>
         </div>
