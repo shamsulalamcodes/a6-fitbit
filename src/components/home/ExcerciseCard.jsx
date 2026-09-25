@@ -1,4 +1,13 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+const ClockIcon = () => (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+    </svg>
+);
+
 
 const ExerciseCard = ({ exercise }) => {
     const {
@@ -9,10 +18,11 @@ const ExerciseCard = ({ exercise }) => {
         duration,
         caloriesBurned,
         rating,
+        id
     } = exercise;
 
     return (
-        <div className="w-full max-w-sm bg-[#15171D] rounded-2xl overflow-hidden border border-white/5">
+        <Link href={`/exercise/${id}`} className="w-full max-w-sm bg-[#15171D] rounded-2xl overflow-hidden border border-white/5">
 
             {/* Image */}
             <div className="relative w-full aspect-5/3 mb-2">
@@ -48,35 +58,13 @@ const ExerciseCard = ({ exercise }) => {
                 </p>
 
                 <div className="flex items-center gap-4 text-white/70 text-sm mt-3 pt-3 border-t border-white/10">
-                    <span className="flex items-center gap-1.5">
-                        <ClockIcon />
-                        {duration} min
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                        <FireIcon />
-                        {caloriesBurned} kcal
-                    </span>
-                    <span className="flex items-center gap-1.5 mr-auto">
-                        <span className="text-[#D4FF3D]">★</span>
-                        {rating}
-                    </span>
+                    <span className="flex items-center gap-1.5">⏰ {duration} min</span>
+                    <span className="flex items-center gap-1.5">🔥 {caloriesBurned} kcal</span>
+                    <span className="flex items-center gap-1.5 mr-auto">☆ {rating}</span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
-
-const ClockIcon = () => (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-    </svg>
-);
-
-const FireIcon = () => (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2c1 3-2 4-2 7a4 4 0 108 0c0-1-.5-2-1-2 .5 2-1 3-2 2 1-2-1-3-1-5-1 1-2 0-2-2z" />
-    </svg>
-);
 
 export default ExerciseCard;

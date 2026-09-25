@@ -9,8 +9,8 @@ const Navbar = () => {
     const path = usePathname()
 
     const mentu = <>
-        <Link className={`px-5 py-1 text-[#9CA3AF] ${path === '/' ? 'rounded-full text-[#C2F800] bg-[#597e389d]' : ''}`} href='./'>Workout</Link>
-        <Link className={`px-5 py-1 text-[#9CA3AF] ${path === '/my-plan' ? 'rounded-full text-[#C2F800] bg-[#597e389d]' : ''}`} href='./my-plan'>My Plan</Link>
+        <Link className={`px-5 py-1 text-[#9CA3AF] ${path === '/' ? 'rounded-full text-[#C2F800] bg-[#597e389d]' : ''}`} href='/'>Workout</Link>
+        <Link className={`px-5 py-1 text-[#9CA3AF] ${path === '/my-plan' ? 'rounded-full text-[#C2F800] bg-[#597e389d]' : ''}`} href='/my-plan'>My Plan</Link>
     </>
 
     return (
