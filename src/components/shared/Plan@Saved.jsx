@@ -2,15 +2,15 @@ import React from 'react';
 
 const PlanSaved = () => {
     return (
-        <div className='text-xl flex gap-3 items-center'>
-            <p className="">
+        <div className='text-lg flex gap-3 items-center text-[#9CA3AF]'>
+            <div className="flex justify-between items-center">
                 Plan
-                <span className='ml-2 px-2 py-1 rounded-full bg-lime-500'>0</span>
-            </p>
-            <p className="">
+                <p className='ml-2 w-10 flex justify-center items-center h-10 rounded-full bg-[#C2F800] text-black font-bold'>45</p>
+            </div>
+            <div className="flex justify-between items-center">
                 Saved
-                <span className='ml-2 px-2 py-1 rounded-full border-2 border-slate-400'>0</span>
-            </p>
+                <p className='ml-2 w-10 flex justify-center items-center h-10 rounded-full  border-2 border-slate-700 font-bold'>0</p>
+            </div>
         </div>
     );
 };
