@@ -14,7 +14,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className='border-b border-slate-700 px-2'>
+        <div className='border-b border-slate-700 px-10'>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -30,7 +30,7 @@ const Navbar = () => {
                     <Link href="./"><Logo /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-lg font-semibold">
+                    <ul className="menu menu-horizontal px-1 font-semibold">
                         {mentu}
                     </ul>
                 </div>

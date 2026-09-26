@@ -1,14 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ClockIcon = () => (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-    </svg>
-);
-
-
 const ExerciseCard = ({ exercise }) => {
     const {
         name,
@@ -22,7 +14,7 @@ const ExerciseCard = ({ exercise }) => {
     } = exercise;
 
     return (
-        <Link href={`/exercise/${id}`} className="w-full max-w-sm bg-[#15171D] rounded-2xl overflow-hidden border border-white/5">
+        <Link href={`/exercise/${id}`} className="w-full mx-auto max-w-sm bg-[#15171D] rounded-2xl overflow-hidden border border-white/5">
 
             {/* Image */}
             <div className="relative w-full aspect-5/3 mb-2">

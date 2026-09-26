@@ -3,6 +3,7 @@ import "./globals.css";
 import ContextProvider from "@/components/context/ContextProvider";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import Toast from "@/components/shared/Toast";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,12 +27,15 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${oswald.variable} bg-black h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full max-w-7xl mx-auto flex flex-col">
         <ContextProvider>
           <Navbar />
-          {children}
+          <main className="p-10">
+            {children}
+            <Toast />
+          </main>
+          <Footer />
         </ContextProvider>
-        <Footer />
       </body>
     </html>
   );
