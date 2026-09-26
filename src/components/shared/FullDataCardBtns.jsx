@@ -19,7 +19,7 @@ const FullDataCardBtns = ({ id, fromSaved }) => {
             const filterOut = planArr.filter(se => Number(se.id) !== Number(id))
             setPlanArr(filterOut)
         }
-        return toast.success(`Removed from today's plan!`, {
+        return toast.success(`Successfully Removed!`, {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
