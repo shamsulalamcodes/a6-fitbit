@@ -9,7 +9,10 @@ const Banner = () => {
             <div className="bg-[#15171D] rounded-2xl">
                 <div className="hero-content flex flex-col md:flex-row">
                     <div className='pl-4 md:w-1/2'>
-                        <span className='text-xs text-[#C2F800]'>WORKOUT LIBRARY</span>
+                        {/* <span className='text-xs text-[#C2F800]'>WORKOUT LIBRARY</span> */}
+                        <span className='block text-xs font-bold uppercase tracking-widest text-[#C2F800] mb-2'>
+                            WORKOUT LIBRARY
+                        </span>
                         <BigHeading one="TRAIN WITH INTENT. LOG EVERY SET." two="FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up." />
                         <BrowseBtn />
                     </div>

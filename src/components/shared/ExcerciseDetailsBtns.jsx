@@ -53,7 +53,7 @@ const ExcerciseDetailsBtns = ({ exercise }) => {
         <div>
             <div className="grid grid-cols-1 text-center sm:grid-cols-2 gap-2 mt-8">
 
-                <button className="px-5 py-2.5 rounded-lg bg-[#D4FF3D] text-[#0A0F0A] font-bold text-sm hover:bg-[#c2eb2e] transition-colors" onClick={handlePlan} >+ Add to plan</button>
+                <button className="px-5 py-2.5 rounded-lg bg-[#D4FF3D] text-[#0A0F0A] font-bold text-sm hover:bg-[#c2eb2e] transition-colors" onClick={handlePlan} >Add to today&apos;s plan</button>
 
                 <button onClick={handleSaved} className="px-5 py-2.5 rounded-lg border border-white/15 text-white font-medium text-sm hover:bg-white/5 transition-colors">🔖 Save for later</button>
 
