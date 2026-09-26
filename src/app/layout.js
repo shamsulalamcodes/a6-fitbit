@@ -16,7 +16,7 @@ const oswald = Oswald({
 });
 
 export const metadata = {
-  title: "B14A6",
+  title: "SHAMSULALAMCODES",
   description: "SHAMSULALAMCODES",
 };
 

@@ -9,7 +9,7 @@ const PlanSaved = () => {
     const { planArr, savedArr } = useContext(CreatedContext)
 
     return (
-        <div className='text-lg flex gap-3 items-center text-[#9CA3AF]'>
+        <div className='flex gap-3 flex-col sm:flex-row items-start pl-5 sm:pl-0 sm:items-center text-[#9CA3AF]'>
             <Link href='/my-plan' className="flex justify-between items-center">
                 Plan
                 <p className='ml-2 w-10 flex justify-center items-center h-10 rounded-full bg-[#C2F800] text-black font-bold'>{planArr.length}</p>

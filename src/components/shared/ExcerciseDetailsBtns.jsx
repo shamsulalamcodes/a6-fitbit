@@ -51,9 +51,12 @@ const ExcerciseDetailsBtns = ({ exercise }) => {
 
     return (
         <div>
-            <div className="flex flex-wrap gap-2 mt-8">
-                <button className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#D4FF3D] text-[#0A0F0A] font-bold text-sm hover:bg-[#c2eb2e] transition-colors" onClick={handlePlan} >+ Add to plan</button>
-                <button onClick={handleSaved} className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/15 text-white font-medium text-sm hover:bg-white/5 transition-colors">🔖 Save for later</button>
+            <div className="grid grid-cols-1 text-center sm:grid-cols-2 gap-2 mt-8">
+
+                <button className="px-5 py-2.5 rounded-lg bg-[#D4FF3D] text-[#0A0F0A] font-bold text-sm hover:bg-[#c2eb2e] transition-colors" onClick={handlePlan} >+ Add to plan</button>
+
+                <button onClick={handleSaved} className="px-5 py-2.5 rounded-lg border border-white/15 text-white font-medium text-sm hover:bg-white/5 transition-colors">🔖 Save for later</button>
+
             </div>
         </div>
     );

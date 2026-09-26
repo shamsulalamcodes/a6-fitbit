@@ -33,17 +33,22 @@ const FullDataCardBtns = ({ id, fromSaved }) => {
     }
 
     return (
-        <div className="grid lg:flex gap-2 grid-cols-3 md:grid-cols-1 lg:gap-3">
+        <div className="grid lg:flex gap-2 grid-cols-1 sm:grid-cols-3 items-center justify-between text-center mx-auto md:grid-cols-1 lg:gap-3">
             {/* <div className="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-3 gap-2"> */}
-            <Link href={`/exercise/${id}`} className="px-4 py-2 rounded-full border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors whitespace-nowrap">
+            <Link href={`/exercise/${id}`} className="px-4 py-2 text-center rounded-full border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors whitespace-nowrap">
                 View Details
             </Link>
-            <button onClick={() => setDone(true)} disabled={done} className={`flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold transition-colors whitespace-nowrap ${done ? 'cursor-not-allowed bg-slate-600 text-slate-200' : "text-[#0A0F0A] bg-[#D4FF3D] hover:bg-[#c2eb2e] "} ${fromSaved && 'hidden'}`}>
-                {done ? 'Done' : "✓ Mark as Done"}
+            <button
+                onClick={() => setDone(true)}
+                disabled={done}
+                className={`flex items-center justify-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold transition-colors whitespace-nowrap ${done ? 'cursor-not-allowed bg-slate-600 text-slate-200' : "text-[#0A0F0A] bg-[#D4FF3D] hover:bg-[#c2eb2e]"
+                    } ${fromSaved && 'hidden'}`}
+            >
+                {done ? "Done" : "✓ Mark as Done"}
             </button>
             <button
                 onClick={onRemove}
-                className="px-4 py-2 rounded-full border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors whitespace-nowrap"
+                className="px-4 py-2 text-center rounded-full border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors whitespace-nowrap"
                 aria-label="Remove"
             >X</button>
         </div>

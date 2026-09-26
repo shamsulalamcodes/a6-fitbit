@@ -34,7 +34,7 @@ const MyPlan = () => {
             <Counts stat={stat} plan={planArr} saved={savedArr} />
             <div className="rounded-2xl">
 
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex flex-col sm:flex-row gap-2 items-center justify-between mb-4">
                     <div className="tabs tabs-box bg-[#14171A] border border-white/5 p-1 rounded-full">
                         <input
                             onClick={() => setStat('plan')}

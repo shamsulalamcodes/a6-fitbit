@@ -25,6 +25,9 @@ const Navbar = () => {
                             tabIndex={-1}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             {mentu}
+                            <div className="sm:hidden">
+                                <PlanSaved />
+                            </div>
                         </ul>
                     </div>
                     <Link href="./"><Logo /></Link>
@@ -34,7 +37,7 @@ const Navbar = () => {
                         {mentu}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="hidden sm:flex navbar-end">
                     <PlanSaved />
                 </div>
             </div>
