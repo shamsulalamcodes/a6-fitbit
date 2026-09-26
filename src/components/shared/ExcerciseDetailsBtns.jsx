@@ -7,7 +7,7 @@ const ExcerciseDetailsBtns = ({ exercise }) => {
 
     const { planArr, setPlanArr, savedArr, setSaved } = useContext(CreatedContext)
 
-    const successToast = () => toast.success(`Added to today's plan!`, {
+    const successToast = () => toast.success(`Added to List!`, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -19,7 +19,7 @@ const ExcerciseDetailsBtns = ({ exercise }) => {
         transition: Bounce,
     })
 
-    const errorToast = () => toast.error(`Already in your plan!`, {
+    const errorToast = () => toast.error(`Already in list!`, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: true,
