@@ -10,6 +10,21 @@ const FullDataCardBtns = ({ id, fromSaved }) => {
     const { planArr, setPlanArr, savedArr, setSaved } = useContext(CreatedContext)
     const [done, setDone] = useState(false)
 
+    const handleDone = () => {
+        setDone(true)
+        toast.success(`Congratulations!!!`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
+    }
+
     const onRemove = () => {
         if (fromSaved) {
             const filterOut = savedArr.filter(se => Number(se.id) !== Number(id))
@@ -39,7 +54,7 @@ const FullDataCardBtns = ({ id, fromSaved }) => {
                 View Details
             </Link>
             <button
-                onClick={() => setDone(true)}
+                onClick={handleDone}
                 disabled={done}
                 className={`flex items-center justify-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold transition-colors whitespace-nowrap ${done ? 'cursor-not-allowed bg-slate-600 text-slate-200' : "text-[#0A0F0A] bg-[#D4FF3D] hover:bg-[#c2eb2e]"
                     } ${fromSaved && 'hidden'}`}
