@@ -17,8 +17,8 @@ const ExerciseDetailsCard = ({ exercise }) => {
 
 
     return (
-        <div className="min-h-screen bg-[#0A0C0E] p-6 md:p-10 md:pb-20">
-            <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="min-h-screen bg-[#0A0C0E] rounded-xl p-6 md:p-10 md:pb-20">
+            <div className="mx-auto max-w-7xl grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-7 lg:gap-10">
                 {/* Image */}
                 <div className="relative w-full aspect-square md:aspect-auto md:h-full rounded-2xl overflow-hidden md:sticky md:top-10">
                     <Image

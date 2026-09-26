@@ -32,7 +32,8 @@ const FullDataCardBtns = ({ id, fromSaved }) => {
     }
 
     return (
-        <>
+        <div className="grid lg:flex gap-2 grid-cols-3 md:grid-cols-1 lg:gap-3">
+            {/* <div className="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-3 gap-2"> */}
             <Link href={`/exercise/${id}`} className="px-4 py-2 rounded-full border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors whitespace-nowrap">
                 View Details
             </Link>
@@ -44,7 +45,7 @@ const FullDataCardBtns = ({ id, fromSaved }) => {
                 className="px-4 py-2 rounded-full border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors whitespace-nowrap"
                 aria-label="Remove"
             >X</button>
-        </>
+        </div>
     );
 };
 
